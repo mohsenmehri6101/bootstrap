@@ -20,6 +20,6 @@
   {{- else if or (eq (len .) 7) (eq (len .) 40) -}}
     <a href="{{ $.Site.Params.repo }}/commit/{{ trim . " " }}">{{ trim (substr . 0 7) " " }}</a>
   {{- else -}}
-    {{ errorf `Wrong parrameter passed in "%s" shortcode: %s` $.Name $.Position }}
+    {{ errorf `Wrong parrameter passed in %q shortcode: %s` $.Name $.Position }}
   {{- end -}}
 {{- end -}}
